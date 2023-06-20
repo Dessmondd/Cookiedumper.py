@@ -12,7 +12,6 @@ List of changes from original code:
 <li>Added missing comma in os.path.join statement in main() function.</li>
 <li>Defined the filename variable before the if statement in main() function.</li>
 <li>Indented the db = sqlite3.connect(filename) line and subsequent lines under the if statement in main() function.</li>
-<li>Added a comma in os.path.join statement in db_path definition.</li>
 <li>Replaced iv: data[3:15] with iv = data[3:15] in decrypt_data() function.</li>
 <li>Added a missing return statement in the first try block of decrypt_data() function.</li>
 <li>Added a closing parenthesis for the main() function.</li>
