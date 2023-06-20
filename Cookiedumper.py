@@ -71,5 +71,5 @@ cursor.execute("""
         WHERE host_key = ?
         AND name = ?""", (decrypted_value, host_key, name))
     db.commit()
-    db.close(
+    db.close()
     
