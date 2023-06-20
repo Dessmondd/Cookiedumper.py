@@ -5,7 +5,7 @@ Python's flexibility makes it the ideal choice for create automation tools like 
 
 As a small project this really helped me with,Scraping, browser automation and data extraction. These skills are highly valued not only in Data Analysis but also Cybersecurity!
 
-
+This script only dumps Cookies from Windows machines.
 
 List of changes from original code:
 <ul>
